@@ -1,9 +1,9 @@
 #include "holberton.h"
 #include <stdio.h>
 
-void (*get_func(char *s))(char *)
+void (*get_func(char s))(char *)
 {
-	specs_t specs = {
+	specs_t specs[] = {
 		/*{"s", print_string},/*/
 		{"c", print_char}
 	};
@@ -11,8 +11,9 @@ void (*get_func(char *s))(char *)
 
 	while (specs[i].specifier != NULL)
 	{
-		if (*specs[i].specifier == *s)
+		if (specs[i].specifier == s)
 			return (specs[i].func);
 		i++;
 	}
+	return (NULL);
 }
