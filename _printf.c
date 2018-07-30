@@ -11,19 +11,25 @@ int _printf(const char *format, ...)
 {
 	int i;
 	va_list list;
+	int a = 0;
 
 	va_start(list, format);
+
 		for (i = 0; format[i] != '\0'; i++)
 		{
 			if (format[i] == '%')
-				get_func(format[i + 1])(list);
-			else if (format[i] == '\\')
 			{
-				if (format[i + 1] == 'n')
-					_putchar('\n');
+				if (format[i + 1] == '%')
+					_putchar('%');
+				else
+					a += get_func(format[i + 1])(list);
+				i++;
 			}
 			else
+			{
 				_putchar(format[i]);
+				a++;
+			}
 		}
-		return (0);
+		return (a);
 }

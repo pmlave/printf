@@ -12,14 +12,13 @@ int print_char(va_list list)
 	char c = va_arg(list, int);
 
 	write(1, &c, 1);
-	return (0);
+	return (1);
 }
 /**
  * print_string - print a string of characters
  * @list: Va_list of values
  * Return: Number of characters printed
  */
-
 int print_string(va_list list)
 {
 	char *c = va_arg(list, char *);
@@ -28,5 +27,5 @@ int print_string(va_list list)
 	while (c[i] != '\0')
 		i++;
 	write(1, c, i);
-	return (0);
+	return (i);
 }
