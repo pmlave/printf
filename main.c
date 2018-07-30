@@ -27,5 +27,9 @@ int main(void)
 
 	printf("%    s\n", "Hello");
 	_printf("%    s\n", "Hello");
+	printf("   %s\n", "Hello");
+	_printf("   %s\n", "Hello");
+	printf("   %  s\n", "Hello");
+	_printf("   %  s\n", "Hello");
 	return (0);
 }
