@@ -16,8 +16,13 @@ int _printf(const char *format, ...)
 		{
 			if (format[i] == '%')
 				get_func(format[i + 1])(list);
-		else
-			_putchar(format[i]);
+			else if (format[i] == '\\')
+			{
+				if (format[i + 1] == 'n')
+					_putchar('\n');
+			}
+			else
+				_putchar(format[i]);
 		}
-	return (0);
+		return (0);
 }
