@@ -1,7 +1,11 @@
 #include "holberton.h"
 #include <stdio.h>
 #include <stdarg.h>
-
+/**
+ * get_func - pointer to evaluating function
+ * @s: Character passed in to compare
+ * Return: Number of characters printed
+ */
 int (*get_func(char s))(va_list)
 {
 	specs_t specs[] = {
