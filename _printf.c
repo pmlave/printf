@@ -15,9 +15,9 @@ int _printf(const char *format, ...)
 		for (i = 0; format[i] != '\0'; i++)
 		{
 			if (format[i] == '%')
-				get_func(format[i + 1])(va_arg(list, char*));
-			else
-				_putchar(format[i]);
+				get_func(format[i + 1])(list);
+		else
+			_putchar(format[i]);
 		}
 	return (0);
 }

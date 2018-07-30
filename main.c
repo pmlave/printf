@@ -3,7 +3,7 @@
 
 int main(void)
 {
-	char string = 'c';
-	_printf("%c", string);
+	char *string = "String";
+	_printf("%sasdjljdg", string);
 	return (0);
 }
