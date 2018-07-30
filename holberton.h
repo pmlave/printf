@@ -1,11 +1,14 @@
-#ifndef _HOLBRTON_H_
+#ifndef _HOLBERTON_H_
 #define _HOLBERTON_H_
 #include <stdarg.h>
 #include <stdio.h>
 #include <stdlib.h>
 
 /**
+ * struct specs - struct for format specifiers
  *
+ * @specifier: the specifier
+ * @func: the function it points to
  */
 typedef struct specs
 {
