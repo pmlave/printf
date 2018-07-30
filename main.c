@@ -24,8 +24,11 @@ int main(void)
 	printf ("");
 	_printf ("\0");
 	printf ("\0");
-
 	_printf("%s\n", NULL);
 	printf("%s\n", NULL);
+	_printf("%s", "He||0");
+	printf("%s", "He||0e");
+	printf("%    s\n", "Hello");
+	_printf("%    s\n", "Hello");
 	return (0);
 }
