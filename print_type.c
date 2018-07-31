@@ -69,7 +69,7 @@ int print_number(va_list list)
  * @a: Value set to va_arg value
  * Return: number of characters printed
  */
-int binary_help(unsigned int a)
+int binary_help(int a)
 {
 	if (a == 0)
 		return (0);
