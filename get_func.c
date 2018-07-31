@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <stdio.h>
 #include <stdarg.h>
 /**
  * get_func - pointer to function to print value
