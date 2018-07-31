@@ -66,7 +66,7 @@ int print_number(va_list list)
 }
 /**
  * binary_help - converts int to binary
- * @list: va_list of values
+ * @a: the number to be converted
  * Return: number of characters printed
  */
 int binary_help(unsigned int a)
