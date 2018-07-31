@@ -13,12 +13,14 @@ int _printf(const char *format, ...)
 
 	va_start(list, format);
 
-	if(format)
+	if (format)
 	{
 		for (i = 0; format[i] != '\0'; i++)
 		{
 			if (format[i] == '%')
 			{
+				if (format[i + 1] == '\0')
+					return (-1);
 				if (format[i + 1] == ' ')
 				{
 					while (format[i + 1] == ' ')
