@@ -23,6 +23,8 @@ int print_string(va_list list)
 	char *c = va_arg(list, char *);
 	int i = 0;
 
+	if (c == NULL)
+		c = "(null)";
 	while (c[i] != '\0')
 		i++;
 	write(1, c, i);

@@ -1,5 +1,6 @@
 #include "holberton.h"
 #include <stdarg.h>
+#include <stdio.h>
 /**
  * _printf - produces output according to a format
  * @format: the input
@@ -20,7 +21,10 @@ int _printf(const char *format, ...)
 			if (format[i] == '%')
 			{
 				if (format[i + 1] == '\0')
+				{
+					va_end(list);
 					return (-1);
+				}
 				if (format[i + 1] == ' ')
 				{
 					while (format[i + 1] == ' ')
@@ -50,7 +54,9 @@ int _printf(const char *format, ...)
 				a++;
 			}
 		}
+		va_end(list);
 		return (a);
 	}
+	va_end(list);
 	return (-1);
 }
