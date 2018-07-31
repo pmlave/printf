@@ -22,4 +22,5 @@ int print_char(va_list list);
 int print_string(va_list list);
 int print_number(va_list list);
 int print_binary(va_list list);
+int binary_help(unsigned int);
 #endif /* _HOLBERTON_H_ */
