@@ -64,3 +64,18 @@ int print_number(va_list list)
 	}
 	return (count);
 }
+/**
+ * print_binary - converts int to binary
+ * @list: va_list of values
+ * Return: number of characters printed
+ */
+int print_binary(va_list list)
+{
+	unsigned int a = va_arg(list, unsigned int);
+	unsigned int b = a;
+
+	if (b == 0)
+		return (0);
+	else
+		return (b % 2 + 10 * print_binary(b / 2));
+}
