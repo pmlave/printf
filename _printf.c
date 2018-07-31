@@ -31,8 +31,10 @@ int _printf(const char *format, ...)
 					_putchar('%');
 					a++;
 				}
-					else if ((format[i + 1] != 'c' &&
-					  format[i + 1] != 's'))
+					else if (format[i + 1] != 'c' &&
+						 format[i + 1] != 's' &&
+						 format[i + 1] != 'i' &&
+						 format[i + 1] != 'd')
 				{
 					_putchar('%');
 					_putchar(format[i + 1]);
