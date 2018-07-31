@@ -65,19 +65,6 @@ int print_number(va_list list)
 	return (count);
 }
 /**
- * binary_help - converts int to binary
- * @a: the number to be converted
- * Return: number of characters printed
- */
-int binary_help(unsigned int a)
-{
-	if (a == 0)
-		return (0);
-	else
-		return (a % 2 + 10 * binary_help(a / 2));
-}
-
-/**
  * print_binary - converts int to binary
  * @list: va_list of values
  * Return: number of characters printed
@@ -89,15 +76,19 @@ int print_binary(va_list list)
 	int div = 1;
 	int result = binary_help(a);
 
-	while (result / div > 9)
-		div = div * 10;
-
-	while (div != 0)
+	if (_isdigit(a))
 	{
-		_putchar(result / div + '0');
-		result = result % div;
-		div = div / 10;
-		count++;
+		while (result / div > 9)
+			div = div * 10;
+
+		while (div != 0)
+		{
+			_putchar(result / div + '0');
+			result = result % div;
+			div = div / 10;
+			count++;
+		}
+		return (count);
 	}
-	return (count);
+	return (0);
 }
