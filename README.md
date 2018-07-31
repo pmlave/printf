@@ -18,9 +18,12 @@ tra` and `-pedantic`
 ---
 File|Task
 ---|---
-TBD | A function that produces output according to a format
+_printf.c | A function that produces output according to a format
 man_3_printf| A man page for the function
-TBD | TBD
+_putchar.c | A simple function to write characters to stdout
+get_func.c | A function to determine which function to pull according to which format specifier
+print_type.c | The functions that determine how to print the given argument
+holberton.h | The header file containing the protoypes for all functions necessary for _printf
 
 ## Authors
 Essence Boayue & Paul Lave
