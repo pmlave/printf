@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <stdio.h>
 #include <unistd.h>
 #include <stdarg.h>
 /**
@@ -28,4 +27,38 @@ int print_string(va_list list)
 		i++;
 	write(1, c, i);
 	return (i);
+}
+/**
+ * print_number - print a numner
+ * @list: Va_list of values
+ * Return: Number of characters printed
+ */
+int print_number(va_list list)
+{
+	unsigned int result;
+	int div = 1;
+	int input, count = 0;
+
+	input = va_arg(list, int);
+
+	if (input < 0)
+	{
+		_putchar('-');
+		result = input * -1;
+		count++;
+	}
+	else
+		result = input;
+
+	while (result / div > 9)
+		div = div * 10;
+
+	while (div != 0)
+	{
+		_putchar(result / div + '0');
+		result = result % div;
+		div = div / 10;
+		count++;
+	}
+	return (count);
 }

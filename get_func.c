@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <stdio.h>
 #include <stdarg.h>
 /**
  * get_func - pointer to function to print value
@@ -11,6 +10,8 @@ int (*get_func(char s))(va_list)
 	specs_t specs[] = {
 		{'s', print_string},
 		{'c', print_char},
+		{'i', print_number},
+		{'d', print_number},
 		{'\0', NULL}
 	};
 	int i = 0;
