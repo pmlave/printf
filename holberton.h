@@ -23,4 +23,5 @@ int print_string(va_list list);
 int print_number(va_list list);
 int print_binary(va_list list);
 int binary_help(unsigned int);
+int _isdigit(unsigned int);
 #endif /* _HOLBERTON_H_ */
