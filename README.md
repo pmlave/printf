@@ -24,6 +24,7 @@ _putchar.c | A simple function to write characters to stdout
 get_func.c | A function to determine which function to pull according to which format specifier
 print_type.c | The functions that determine how to print the given argument
 holberton.h | The header file containing the protoypes for all functions necessary for _printf
+helpers.c | A file containing helper functions for functions in print_type.c
 
 ## Authors
 Essence Boayue & Paul Lave
