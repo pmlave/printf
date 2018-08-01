@@ -23,12 +23,16 @@ and
 will both print out a number given as an argument. The number given can be positive or negative.
 .B %b
 will take an integer in as an argument, convert it to binary, and then print the number in binary form.
+.B %r
+will take a string as an argument, and print that string in reverse.
+.B %R
+will take a string as an argument, convert it to rot13, and print it.
 .SH OPTIONS
 .B _printf
 does not take any options.
 .SH SEE ALSO
 .I printf(3)
 .SH BUGS
-No known bugs.
+The %b format specifier has undefined behavior when a negative number is passed in.
 .SH AUTHOR
 Essence Boayue, Paul Lave
