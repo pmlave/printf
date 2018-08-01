@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <unistd.h>
 /**
  * binary_help - converts int to binary
  * @a: Value set to va_arg value
@@ -38,4 +39,29 @@ int _isdigit(unsigned int i)
 		}
 	}
 	return (1);
+}
+/**
+ * print_reverse - print the string in reverse
+ * @list: List of va_list values
+ * Return: Number of characters printed
+ */
+int print_reverse(va_list list)
+{
+	char *s = va_arg(list, char *);
+	int a, b;
+
+	if (s)
+	{
+		a = 0;
+		while (s[a] != '\0')
+			a++;
+		a--;
+		while (a >= 0)
+		{
+			_putchar(s[a]);
+			a--;
+			b++;
+		}
+	}
+	return (b);
 }
