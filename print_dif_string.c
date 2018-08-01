@@ -7,7 +7,7 @@
 int print_dif_string(va_list list)
 {
 	char *c = va_arg(list, char *);
-
+	int count = 0;
 	int i = 0;
 
 
@@ -21,12 +21,15 @@ int print_dif_string(va_list list)
 			_putchar('x');
 			_putchar((hex_help(c[i] / 0x10)));
 			_putchar((hex_help(c[i] % 0x10)));
-			i += 4;
+			count += 4;
 		}
 		else
+		{
 			_putchar(c[i]);
+			count++;
+		}
 		i++;
 	}
 
-	return (i);
+	return (count);
 }
