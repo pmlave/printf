@@ -65,3 +65,41 @@ int print_reverse(va_list list)
 	}
 	return (b);
 }
+/**
+ * _rot13 - translate something into rot13
+ * @list: Va_list values
+ * Return: Number of characters printed
+ */
+int _rot13(va_list list)
+{
+	char *s = va_arg(list, char *);
+	int i;
+	int j;
+	int x;
+	char *a = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char *c = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+
+	i = 0;
+	if (!s)
+		s = "(null)";
+	while (s[i])
+	{
+		x = 0;
+		for (j = 0; a[j] != '\0'; j++)
+		{
+			if (s[i] == a[j])
+			{
+				_putchar(c[j]);
+				i++;
+				x = 1;
+				break;
+			}
+		}
+		if (x != 1)
+		{
+			_putchar(s[i]);
+			i++;
+		}
+	}
+	return (i);
+}

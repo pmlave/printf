@@ -25,4 +25,5 @@ int print_binary(va_list list);
 int binary_help(unsigned int);
 int _isdigit(unsigned int);
 int print_reverse(va_list list);
+int _rot13(va_list list);
 #endif /* _HOLBERTON_H_ */
