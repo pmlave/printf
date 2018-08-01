@@ -48,7 +48,7 @@ int _isdigit(unsigned int i)
 int print_reverse(va_list list)
 {
 	char *s = va_arg(list, char *);
-	int a, b;
+	int a, b = 0;
 
 	if (s)
 	{
