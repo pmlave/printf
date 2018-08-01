@@ -45,7 +45,8 @@ int _printf(const char *format, ...)
 						 format[i + 1] != 'u' &&
 						 format[i + 1] != 'o' &&
 						 format[i + 1] != 'x' &&
-						 format[i + 1] != 'X')
+						 format[i + 1] != 'X' &&
+						 format[i + 1] != 'S')
 				{
 					_putchar('%');
 					_putchar(format[i + 1]);

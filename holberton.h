@@ -29,4 +29,6 @@ int _rot13(va_list list);
 int print_unsigned(va_list list);
 int print_octal(va_list list);
 int octal_help(int a);
+int print_dif_string(va_list list);
+char hex_help(unsigned int n);
 #endif /* _HOLBERTON_H_ */

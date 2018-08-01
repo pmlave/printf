@@ -17,6 +17,7 @@ int (*get_func(char s))(va_list)
 		{'R', _rot13},
 		{'u', print_unsigned},
 		{'o', print_octal},
+		{'S', print_dif_string},
 		{'\0', NULL}
 	};
 	int i = 0;
