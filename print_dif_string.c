@@ -21,6 +21,7 @@ int print_dif_string(va_list list)
 			_putchar('x');
 			_putchar((hex_help(c[i] / 0x10)));
 			_putchar((hex_help(c[i] % 0x10)));
+			i += 4;
 		}
 		else
 			_putchar(c[i]);
