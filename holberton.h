@@ -23,7 +23,10 @@ int print_string(va_list list);
 int print_number(va_list list);
 int print_binary(va_list list);
 int binary_help(unsigned int);
-int _isdigit(unsigned int);
+int _isdigit(unsigned int a);
 int print_reverse(va_list list);
 int _rot13(va_list list);
+int print_unsigned(va_list list);
+int print_octal(va_list list);
+int octal_help(int a);
 #endif /* _HOLBERTON_H_ */
