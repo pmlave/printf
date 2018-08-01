@@ -14,6 +14,7 @@ int (*get_func(char s))(va_list)
 		{'d', print_number},
 		{'b', print_binary},
 		{'r', print_reverse},
+		{'R', _rot13},
 		{'\0', NULL}
 	};
 	int i = 0;
